@@ -57,7 +57,8 @@ module.exports = function (content, file, conf) {
     const headingTree = buildHeadingTree(tokens);
 
     return JSON.stringify({
-        html
+        html,
+        headingTree
     });
 }
 

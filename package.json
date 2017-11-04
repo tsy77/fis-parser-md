@@ -1,5 +1,5 @@
 {
-  "name": "fis-parser-markdown2vue",
+  "name": "fis-parser-md",
   "version": "1.0.0",
   "description": "a markdown parser for fis",
   "main": "index.js",
