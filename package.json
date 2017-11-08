@@ -1,6 +1,6 @@
 {
   "name": "fis-parser-md",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a markdown parser for fis",
   "main": "index.js",
   "scripts": {
