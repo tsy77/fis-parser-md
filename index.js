@@ -62,10 +62,10 @@ module.exports = function (content, file, conf) {
     });
 }
 
-module.exports.defaulfOptions = {
+module.exports.defaultOptions = {
     highlight: function (code, lang) {
         if(lang && hljs.getLanguage(lang)){
-            return hljs.highlight(lang, code).value;
+            return hljs.highlight(lang, code, true).value;
         } else {
             return hljs.highlightAuto(code).value;
         }
