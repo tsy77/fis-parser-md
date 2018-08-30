@@ -53,8 +53,15 @@ module.exports = function (content, file, conf) {
     marked.setOptions(conf);
 
     const tokens = marked.lexer(content)
-    const html = marked(content);
     const headingTree = buildHeadingTree(tokens);
+    let html = marked(content);
+
+    if (conf.isHtmlParse) {
+        html = fis.compile.partial(html, file, {
+            ext: 'html',
+            isHtmlLike: true
+        });
+    };
 
     return 'module.exports = ' + JSON.stringify({
         html,
